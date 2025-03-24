@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+    height: 55px;
+    background-color: violet;
+}
+
+.head {
+    padding-left: 40px;
+    padding-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav {
+    height: 60px;
+    background-color: bisque;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-left {
+    height: 100%;
+    width: 30%;
+    padding-top: 17px;
+    padding-left: 50px;
+    float: left;
+}
+
+.a1, .a2, .a3 {
+    padding: 20px;
+    font-size: 17px;
+}
+
+.nav-middle {
+    height: 100%;
+    width: 45%;
+    float: left;
+}
+
+.nav-right {
+    height: 100%;
+    width: 25%;
+    float: left;
+    padding-top: 17px;
+    padding-left: 50px;
+}
+
+.a4 {
+    margin-right: 20px;
+    font-size: 17px;
+}
+
+.a5 {
+    margin-left: 20px;
+    font-size: 17px;
+}
+
+.head-p {
+    text-align: center;
+    font-size: 30px;
+    color: red;
+}
+
+.nav::after {
+    content: "";
+    display: inline-block;
+    clear: both;
+}
+
+.middle {
+    height: 550px;
+    background-color: lightcoral;
+}
+
+.middle-left, .middle-right {
+    height: 100%;
+    width: 25%;
+    float: left;
+}
+
+.middle-mid {
+    height: 100%;
+    width: 50%;
+    float: left;
+    padding-top: 70px;
+    padding-left: 80px;
+}
+
+.middle-mid-p {
+    font-size: 19px;
+    margin-right: 50px;
+}
+
+.middle::after {
+    content: "";
+    display: inline-block;
+    clear: both;
+}
+
+.footer {
+    height: 50px;
+    background-color: darksalmon;
+}
+
+.h3-footer {
+    text-align: center;
+}
