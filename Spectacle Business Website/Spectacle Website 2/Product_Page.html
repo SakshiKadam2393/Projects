@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Product_Page.css">
+    <title>Product Page</title>
+</head>
+<body>
+    <h1 class="title">Wide Range Of Spectacles</h1>
+    <div class="body">
+        <div class="box1">
+            <div class="box1-img">
+                <img src="Images/Spectacle_1.png" alt="">
+            </div>
+            <div class="box1-info">
+                <h2>Ray-Ban</h2>
+                <p>$1000</p>
+                <div class="box1-add">
+                    <button onclick="addProductToCart({name : 'Ray-Ban', price : 1000 })"> Add To Cart </button>
+                </div>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="box2-img">
+                <img src="Images/Spectacle_2.png" alt="">
+            </div>
+            <div class="box2-info">
+                <h2>Titan</h2>
+                <p>$2000</p>
+                <div class="box2-add">
+                    <button onclick="addProductToCart({name : 'Titan' , price : 2000 })"> Add To Cart </button>
+                </div>
+            </div>
+        </div>
+        <div class="box3">
+            <div class="box3-img">
+                <img src="Images/Spectacle_3.png" alt="">
+            </div>
+            <div class="box3-info">
+                <h2>Dior</h2>
+                <p>$5000</p>
+                <div class="box3-add">
+                    <button onclick="addProductToCart({name : 'Dior' , price : 5000 })"> Add To Cart </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="Cart_Page.html">View Cart</a>
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartCount = document.querySelector('.cart-count');
+        const cartItems = document.querySelector('.cart-items');
+    
+        // Clear cart on page load
+        window.onload = function() {
+            localStorage.removeItem('cart');
+            cart = [];
+            updateCartCount();
+        };
+    
+        function addProductToCart(product) {
+            const existingProductIndex = cart.findIndex(item => item.name === product.name);
+            if (existingProductIndex !== -1) {
+                cart[existingProductIndex].quantity = (cart[existingProductIndex].quantity || 1) + 1;
+            } else {
+                product.quantity = 1;
+                cart.push(product);
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartCount();
+            window.location.href = 'Cart_Page.html';
+        }
+    
+        function updateCartCount() {
+            cartCount.textContent = cart.reduce((acc, item) => acc + (item.quantity || 1), 0);
+        }
+    </script>
+</body>
+</html>

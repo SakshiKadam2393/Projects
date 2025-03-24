@@ -1,0 +1,127 @@
+body {
+    font-family: 'Elegant Font', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-image: url('Images/bg4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.title {
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+h1 {
+    padding: 20px;
+    margin: 0 auto;
+    text-align: left;
+    max-width: 800px;
+    font-size: 30px;
+    color: black;
+    margin-top: 0;
+}
+
+.content-box {
+    padding: 20px;
+    margin: 0 auto;
+    text-align: left;
+    max-width: 800px;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Example background color with transparency */
+    border-radius: 10px; /* Add border radius for rounded corners */
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #000000;
+}
+
+.body {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+.box1,
+.box2,
+.box3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    max-width: 250px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Example background color with transparency */
+}
+
+.box1 .box2 .box3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    max-width: 250px;
+    margin-bottom: 20px;
+}
+
+.box1-img img,
+.box2-img img,
+.box3-img img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.box1-add button,
+.box2-add button,
+.box3-add button {
+    background-color: black;
+    color: whitesmoke;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.box1-add button:hover,
+.box2-add button:hover,
+.box3-add button:hover {
+    background-color: #002ead; /* Change background color on hover */
+}
+
+.hyperlinks {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.hyperlinks a {
+    color: whitesmoke;
+    text-decoration: none;
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 0 5px; /* Add spacing between links */
+}
+
+.hyperlinks a:hover {
+        background-color:#002ead;
+        transition: 0.7s;
+}
